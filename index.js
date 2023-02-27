@@ -31,7 +31,7 @@
 // yaha per outut normal string aigi array ki kyune dstructuring krdi gyi ha iski
 // ================================================================================
 
-//4
+//5
 // console.log(typeof NaN) // number
 // let a = NaN;
 // console.log(NaN == NaN, isNaN(a));
@@ -41,7 +41,47 @@
 // ref : https://stackoverflow.com/questions/2801601/why-does-typeof-nan-return-number
 // ======================================================================================
 
-//5
+//6
+// console.log(10 - - 10) 
+// ye output dega 20
+// ==========================
 
 
 
+//7
+// const set = new Set([1, 1, 2, 3, 4,7]);
+// console.log(set)
+
+// ==========================
+
+
+//8
+// let data = { name: "azeem" };
+// console.log(delete data.name);
+// console.log(data)
+
+//9
+// let data = { name: "azeem" };
+// console.log(delete data);
+// console.log(data); 
+//  delete ni kiya data ko ab
+
+// ==================================================== 
+
+
+// 10
+// const data = ["1", "2", "3"];
+// const [a, b] = data;
+// console.log(a, b); 
+// output 1,2
+
+// ==================================================== 
+
+
+// 11
+// const data = ["1", "2", "3"];
+// const [,,a] = data;
+// console.log(a); 
+// output  3
+
+// ==================================================== 
