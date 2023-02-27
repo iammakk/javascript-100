@@ -124,10 +124,55 @@
 // let a = 'azeem';
 // console.log(a()) //: a is not a function
 
+
 // =========================================================
+
 
 //16
 // let res = false || {} || null;
-// console.log(res); //{};
+// console.log(res); 
+// agar teeno vals false ha to last wali ko utha lega
+
+
+//17
+// console.log(Promise.resolve(5));
 
 // =========================================================
+
+
+//18
+console.log("😃" === "😃");
+// ttrue coz it matches unicodes of emojies
+
+
+// =========================================================
+
+
+// 19
+//const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+
+//console.log(obj); // it parses json
+
+// =========================================================
+// 20
+
+// let name = 'azeem';
+// function getName() {
+//     console.log(name);
+//     let name = "az"
+// }
+// getName() // Cannot access 'name' before initialization
+
+
+// =========================================================
+// 21
+// let name = 'azeem';
+// function getName() {
+//     console.log(name);
+  
+// }
+// getName() // azeem global scope se accept kr rha value;
+// let==>> block level scope
+
+// =========================================================
+// 22
