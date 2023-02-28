@@ -141,7 +141,7 @@
 
 
 //18
-console.log("😃" === "😃");
+// console.log("😃" === "😃");
 // ttrue coz it matches unicodes of emojies
 
 
@@ -176,3 +176,24 @@ console.log("😃" === "😃");
 
 // =========================================================
 // 22
+
+// console.log((x => x)('I hate'));
+// anonymous
+
+// =========================================================
+// 23
+
+// function sumVals(x, y, z) {
+//     console.log( x + y + z);
+    
+// }
+// sumVals(...[1,2,3]) // destruct array ki values
+
+
+// =========================================================
+// 24
+const name = 'azeem is human';
+console.log(!typeof name);
+
+console.log(!typeof name === "object");
+console.log(!typeof name === "string");
