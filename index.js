@@ -35,25 +35,22 @@
 // console.log(typeof NaN) // number
 // let a = NaN;
 // console.log(NaN == NaN, isNaN(a));
-// NaN ek number type hi hai lkn kuch different tarah ka 
+// NaN ek number type hi hai lkn kuch different tarah ka
 // imp!!! we can check a variable if its a NaN or not return true or false. iska comparison bhi false hota
 // kyuuke har bar ek dusra NaN generate hota ha koi unique to number ha iseliye to false return krta ha
 // ref : https://stackoverflow.com/questions/2801601/why-does-typeof-nan-return-number
 // ======================================================================================
 
 //6
-// console.log(10 - - 10) 
+// console.log(10 - - 10)
 // ye output dega 20
 // ==========================
-
-
 
 //7
 // const set = new Set([1, 1, 2, 3, 4,7]);
 // console.log(set)
 
 // ==========================
-
 
 //8
 // let data = { name: "azeem" };
@@ -63,36 +60,34 @@
 //9
 // let data = { name: "azeem" };
 // console.log(delete data);
-// console.log(data); 
+// console.log(data);
 //  delete ni kiya data ko ab
 
-// ==================================================== 
-
+// ====================================================
 
 // 10
 // const data = ["1", "2", "3"];
 // const [a, b] = data;
-// console.log(a, b); 
+// console.log(a, b);
 // output 1,2
 
-// ==================================================== 
-
+// ====================================================
 
 // 11
 // const data = ["1", "2", "3"];
 // const [,,a] = data;
-// console.log(a); 
+// console.log(a);
 // output  3
 
-// ==================================================== 
+// ====================================================
 
 // 11
 // const data = {a:1,b:2,c:3}
 // const { a } = data;
-// console.log(a); 
+// console.log(a);
 // output  1
 
-// ==================================================== 
+// ====================================================
 
 //12
 // const data1 = { a: 1, b: 2, c: 3 };
@@ -100,7 +95,7 @@
 // let d = { ...data1, ...data2 };
 // output { a: 1, b: 2, c: 3, d: 1, e: 2, f: 3 }
 
-// ==================================================== 
+// ====================================================
 //13
 
 // const data1 = { a: 1, b: 2, c: 3 };
@@ -109,7 +104,7 @@
 // console.log(d);
 // output { data1: { a: 1, b: 2, c: 3 }, d: 1, e: 2, f: 3 };
 
-// ==================================================== 
+// ====================================================
 //14
 // const data1 = { a: 1, b: 2, c: 3 };
 // const data2 = { d: 1, e: 2, c: 7 };
@@ -124,29 +119,23 @@
 // let a = 'azeem';
 // console.log(a()) //: a is not a function
 
-
 // =========================================================
-
 
 //16
 // let res = false || {} || null;
-// console.log(res); 
+// console.log(res);
 // agar teeno vals false ha to last wali ko utha lega
-
 
 //17
 // console.log(Promise.resolve(5));
 
 // =========================================================
 
-
 //18
 // console.log("😃" === "😃");
 // ttrue coz it matches unicodes of emojies
 
-
 // =========================================================
-
 
 // 19
 //const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
@@ -163,13 +152,12 @@
 // }
 // getName() // Cannot access 'name' before initialization
 
-
 // =========================================================
 // 21
 // let name = 'azeem';
 // function getName() {
 //     console.log(name);
-  
+
 // }
 // getName() // azeem global scope se accept kr rha value;
 // let==>> block level scope
@@ -185,15 +173,99 @@
 
 // function sumVals(x, y, z) {
 //     console.log( x + y + z);
-    
+
 // }
 // sumVals(...[1,2,3]) // destruct array ki values
 
-
 // =========================================================
 // 24
-const name = 'azeem is human';
-console.log(!typeof name);
+// const name = 'azeem is human';
+// console.log(!typeof name);
 
-console.log(!typeof name === "object");
-console.log(!typeof name === "string");
+// console.log(!typeof name === "object");
+// console.log(!typeof name === "string");
+
+// yaha ye operation left to right chalta hai !typeof name? ty
+//type of name to hai to ye false return krta hai to jb compare
+// kro false===string to jo marzi hojai false return krega..
+
+// =========================================================
+// 25
+
+// let person = { name: "azeem" };
+// Object.seal(person); // it wont let you modify with new vals;
+// person.age = 21;
+// console.log(person);
+ 
+
+// =========================================================
+// 26
+// let a = [1, 2, 3, 4];
+// a.shift(); removes first element and by usinng pop removes last elem
+// console.log(a);
+
+// ========================================================
+// 27
+
+// let a = 3;
+// console.log(a%2)
+// ========================================================
+// 28
+
+// let d = 2;
+// console.log(typeof !d); 
+// koi bhi val ke agy ! laga do to vo usko boolean krdegi aur usme false
+
+// ========================================================
+// 29
+// diff?bet map and forEach
+// map return something but foreach nots
+
+
+// ========================================================
+// 30
+//  let a = [1, 2, 3, 4];
+// delete a[1];
+// console.log(a.length); // remains 4 
+// console.log(a) //[ 1, <1 empty item>, 3, 4 ]
+
+// ========================================================
+// 31
+// merge 2 array
+
+// let a = [1, 2, 3];
+// let b = [1, 2, 4];
+// console.log([...a,...b])  //[ 1, 2, 3, 1, 2, 4 ];
+
+
+// ========================================================
+// 32
+// let a = 5;
+// setTimeout(() => {
+//     console.log(a);
+// }, 0);
+// a = 100;  takes second a;
+
+// ========================================================
+// 33
+// let a = 1;
+// let A = 5;
+// console.log(a,A); case sensitive;
+// ========================================================
+// 34
+// let a = `a`
+// let b = "a";
+// console.log(a === b);
+// ========================================================
+// 34
+// let a = 10;
+// let b = 1;
+// let c = 2;
+// console.log(a === b === --c); // firsst half become true and it compares with number 
+// obvioulsy false
+// ========================================================
+// 35
+// console.log([[[[[]]]]]);
+
+// ========================================================
+// 36 important
