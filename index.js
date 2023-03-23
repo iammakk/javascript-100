@@ -196,7 +196,6 @@
 // Object.seal(person); // it wont let you modify with new vals;
 // person.age = 21;
 // console.log(person);
- 
 
 // =========================================================
 // 26
@@ -213,7 +212,7 @@
 // 28
 
 // let d = 2;
-// console.log(typeof !d); 
+// console.log(typeof !d);
 // koi bhi val ke agy ! laga do to vo usko boolean krdegi aur usme false
 
 // ========================================================
@@ -221,12 +220,11 @@
 // diff?bet map and forEach
 // map return something but foreach nots
 
-
 // ========================================================
 // 30
 //  let a = [1, 2, 3, 4];
 // delete a[1];
-// console.log(a.length); // remains 4 
+// console.log(a.length); // remains 4
 // console.log(a) //[ 1, <1 empty item>, 3, 4 ]
 
 // ========================================================
@@ -236,7 +234,6 @@
 // let a = [1, 2, 3];
 // let b = [1, 2, 4];
 // console.log([...a,...b])  //[ 1, 2, 3, 1, 2, 4 ];
-
 
 // ========================================================
 // 32
@@ -261,11 +258,113 @@
 // let a = 10;
 // let b = 1;
 // let c = 2;
-// console.log(a === b === --c); // firsst half become true and it compares with number 
+// console.log(a === b === --c); // firsst half become true and it compares with number
 // obvioulsy false
 // ========================================================
 // 35
 // console.log([[[[[]]]]]);
 
 // ========================================================
-// 36 important
+// 36 important hoisting let and var
+// pehle variable define kro phr use kroge ==> let
+// pehle variable use kro phr bad me define krlena kroge ==> var
+
+// ========================================================
+// 37
+// function name() {
+//   for (let i = 0; i < 3; i++) {
+//     setTimeout(() => {
+//       console.log(i);
+//     });
+//   }
+// }
+// name();
+// ========================================================
+// 38 here is javascript hoisting concept
+// DEF
+// Hoisting is a JavaScript mechanism where variables and function declarations are moved
+// to the top of their scope before code execution.
+// keyword var and function only normal function is hoisted and let and const does not allow hoisting.
+
+// Some ways to avoid hoisting are:
+// Use let or const — As explained above, using let or const instead of var would throw an exception and not let the program run, hence helping catch the issue earlier.
+// Use function expressions instead of function declarations.
+
+// x = 5;
+// console.log(x);
+// var x; // it is good
+
+// Initializations are not hoisted!
+// Hoisting only works for declarations, not initializations.So,
+// console.log(y);
+// var y = 13;
+// The above code will give undefined as output, as it is the same as writing,
+
+// var y;
+// console.log(y);
+// y = 13;
+// Observe how the declaration var y is hoisted,
+//   but y = 13 is not, as only the declarations are hoisted!
+// Some ways to avoid hoisting are:
+
+// Use let or const — As explained above, using let or const instead
+// of var would throw an exception and not let the program run,
+//   hence helping catch the issue earlier.
+// Use function expressions instead of function declarations
+// An example of a function declaration:
+// console.log(printRandom());
+// function printRandom() {
+//   return "Print Random";
+// }
+
+// The above function declaration will be hoisted and will
+// print out Print Random.However, a function expression
+//  like the below snippet will not be hoisted and will throw an error:
+
+// console.log(printRandom());
+// var printRandom = function () {
+//    return "Print Random";
+// }
+
+// func declaration means defining function like in a simple way and expression means assigning a function in a variable
+// ========================================================
+// 39 here is concept of Js lexical scope.
+
+// Lexical scope is the definition area of an expression.
+
+// In other words, an item's lexical scope is the place in which the item got created.
+
+// Note:
+
+// Another name for lexical scope is static scope.
+// The place an item got invoked (or called) is not necessarily the item's lexical scope.
+// Instead, an item's definition space is its lexical scope.
+// Define a variable in the global scope:
+// const myName = "Oluwatobi";
+
+// // Call myName variable from a function:
+// function getName() {
+//   return myName;
+// }
+// Question: Which of the two spaces is myName’s lexical scope? Is it the global scope or the getName() function’s local scope?
+
+//   Answer : Remember that lexical scope means definition space — not invocation space.Therefore,
+// myName’s lexical scope is the global scope because we defined myName
+//     in the global environment.
+// ========================================================
+// 40 here is javascript closures concept
+// DEFF
+// A closure is a feature in JavaScript where an inner function has access to the outer
+//   (enclosing) function’s variables — a scope chain.
+// A closure is a function that preserves the outer scope in its inner scope.
+function greeting() {
+    let message = 'Hi';
+
+    function sayHi() {
+        console.log(message);
+    }
+
+    return sayHi;
+}
+let hi = greeting();
+hi(); // still can access the message variable
