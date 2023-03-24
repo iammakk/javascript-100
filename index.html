@@ -7,180 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <form
-      id="payfort_payment1"
-      action="https://sbcheckout.payfort.com/FortAPI/paymentPage"
-      method="POST"
-    >
-      <input
-        type="hidden"
-        id="merchant_identifier"
-        name="merchant_identifier"
-        value="uUEpTSLn"
-      />
-      <input
-        type="hidden"
-        id="access_code"
-        name="access_code"
-        value="KCXFH0SKuu1hC7wjZ5v0"
-      />
-      <input
-        type="hidden"
-        id="merchant_reference"
-        name="merchant_reference"
-        value="ReferenceMerchant158625"
-      />
-      <input type="hidden" id="language" name="language" value="en" />
-      <input
-        type="hidden"
-        id="service_command"
-        name="service_command"
-        value="TOKENIZATION"
-      />
-      <input
-        type="hidden"
-        id="return_url"
-        name="return_url"
-        value="https://yelo.tk/"
-      />
-      <input
-        type="hidden"
-        id="signature"
-        name="signature"
-        value="5750f26b66c8441c3bac44c9ab7268ef123717ef810a3388c3d602c8b054d602"
-      />
-      <input
-        type="hidden"
-        id="card_number"
-        name="card_number"
-        value="4557012345678902"
-      />
-      <input
-        type="hidden"
-        id="card_holder_name"
-        name="card_holder_name"
-        value="Mr Smith"
-      />
-      <input
-        type="hidden"
-        id="card_security_code"
-        name="card_security_code"
-        value="123"
-      />
-      <input type="hidden" id="expiry_date" name="expiry_date" value="2505" />
-      <button type="submit">Click Hre</button>
-    </form>
+    <script>
+      function updateClickCount() {
+        var counter = 0;
+        console.log(counter, "1");
 
-    <form
-      id="payfort_payment"
-      action="https://sbcheckout.payfort.com/FortAPI/paymentPage"
-      method="POST"
-    >
-      <input
-        type="hidden"
-        id="merchant_identifier"
-        name="merchant_identifier"
-        value="uUEpTSLn"
-      />
-      <input type="hidden" id="amount" name="amount" value="10000" />
-      <input
-        type="hidden"
-        id="access_code"
-        name="access_code"
-        value="KCXFH0SKuu1hC7wjZ5v0"
-      />
-      <input
-        type="hidden"
-        id="merchant_reference"
-        name="merchant_reference"
-        value="ReferenceMerchant158625"
-      />
-      <input type="hidden" id="language" name="language" value="en" />
-      <input type="hidden" id="command" name="command" value="PURCHASE" />
-      <input
-        type="hidden"
-        id="return_url"
-        name="return_url"
-        value="https://yelo.tk/"
-      />
-      <input
-        type="hidden"
-        id="signature"
-        name="signature"
-        value="79fd81f0945fca07bcaa466d4ec487dd5171acec079f20826c64cfff1e97d038"
-      />
-      <input
-        type="hidden"
-        id="customer_email"
-        name="customer_email"
-        value="farhanameer45@gmail.com"
-      />
-      <input
-        type="hidden"
-        id="token_name"
-        name="token_name"
-        value="a2833d0eec6548f99a133897b5557ea0"
-      />
-      <input type="hidden" id="currency" name="currency" value="SAR" />
-      <input
-        type="hidden"
-        id="customer_name"
-        name="customer_name"
-        value="FarhanAmeer"
-      />
-      <button type="submit">Click Require Payment</button>
-    </form>
-
-    <h2>Page Integration Setup</h2>
-
-    <form
-      id="payfort_payment"
-      action="https://sbcheckout.payfort.com/FortAPI/paymentPage"
-      method="POST"
-    >
-      <input
-        type="hidden"
-        id="merchant_identifier"
-        name="merchant_identifier"
-        value="uUEpTSLn"
-      />
-      <input type="hidden" id="amount" name="amount" value="10000" />
-      <input
-        type="hidden"
-        id="access_code"
-        name="access_code"
-        value="Hy3jvRTlaLEymUQgT6JP"
-      />
-      <input
-        type="hidden"
-        id="merchant_reference"
-        name="merchant_reference"
-        value="OrderId52410"
-      />
-      <input
-        type="hidden"
-        id="customer_email"
-        name="customer_email"
-        value="farhanameer45@gmail.com"
-      />
-
-      <input
-        type="hidden"
-        id="return_url"
-        name="return_url"
-        value="https://yelo.tk/"
-      />
-      <input type="hidden" id="language" name="language" value="en" />
-      <input type="hidden" id="command" name="command" value="AUTHORIZATION" />
-      <input type="hidden" id="amount" name="amount" value="10000" />
-      <input
-        type="hidden"
-        id="signature"
-        name="signature"
-        value="d84607dff5b3726a9837a36c9260a55e471426c4873934c4be45cd7f0fe5db19"
-      />
-      <input type="hidden" id="currency" name="currency" value="SAR" />
-      <button type="submit">Custom Page Integration</button>
-    </form>
+        return function a() {
+          ++counter;
+          console.log(counter);
+          document.getElementById("spnCount").innerHTML = counter;
+        };
+      };
+      let a = updateClickCount();
+    </script>
   </body>
+  <button onclick="a()">click me</button>
+  <div>you've clicked <span id="spnCount"> 0 </span> times!</div>
 </html>

@@ -357,14 +357,70 @@
 // A closure is a feature in JavaScript where an inner function has access to the outer
 //   (enclosing) function’s variables — a scope chain.
 // A closure is a function that preserves the outer scope in its inner scope.
-function greeting() {
-    let message = 'Hi';
 
-    function sayHi() {
-        console.log(message);
-    }
+// Closure:Function bundled with its lexical environment is known as a closure.
+// Whenever function is returned, even if its vanished in execution context but still it remembers
+//  the reference it was pointing to.Its not just that function alone it returns but the entire
+//  closure and that's where it becomes interesting
+// !!Thank you so much, Akshay for this :) :)
 
-    return sayHi;
-}
-let hi = greeting();
-hi(); // still can access the message variable
+// ========================================================
+// 41
+// setTime out in loop with var and let
+// only scope differnece var has function scope and let has block scope
+// for (var i = 0; i < 3; i++) {
+//   setTimeout(() => {
+//     console.log(i);
+//   });
+// }
+
+// ========================================================
+// 42
+// console.log(+true); // 1
+// console.log(typeof +true); // number
+
+// ========================================================
+// 43
+// let data = "size";
+// const bird = {
+//   size:"small"
+// }
+// console.log(bird[data]); //small
+// console.log(bird["size"]);//small
+// console.log(bird.size);//small
+// console.log(bird.data);//small
+// ========================================================
+// 44
+// let num = 0;
+// console.log(num++); //0
+// console.log(++num); //2
+
+// console.log(num);//2
+// ========================================================
+// 45
+// function a(...params) {
+//   console.log(typeof params); // object hai aur ... se array me convert hoj{a:"a"}i
+// }
+// a({a:"a"}) 
+// ========================================================
+// 46
+// function ab() {
+//   'use strict' // is se hame proper rules follow krenge honge
+//   a = 6;
+//   console.log(a);
+// }
+// ab()
+// ========================================================
+// 47
+// session storage clears as soon as the tab closes
+// ========================================================
+// 48
+// hasOwnProperty returns a boolean value indicating whether
+//  the object on which you are calling it has a property with the name of 
+//  the argument.For example:
+
+// var x = {
+//     y: 10
+// };
+// console.log(x.hasOwnProperty("y")); //true
+// console.log(x.hasOwnProperty("z")); //false
